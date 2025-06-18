@@ -7,7 +7,7 @@ $dbc = mysqli_connect(
     'localhost',   // server
     'root',        // korisnik
     '',            // lozinka
-    'projekt'   // ime baze
+    'projekt'      // ime baze
 ) or die('Ne mogu se spojiti na bazu: ' . mysqli_connect_error());
 
 // postavi utf8 encoding

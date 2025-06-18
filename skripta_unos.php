@@ -11,7 +11,7 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['razina'] != 1) {
 // ako je POST, procesiraj unos
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // 1) upload slike
-  $targetDir = 'img/';
+  $targetDir = 'pictures/';
   $filename  = basename($_FILES['slika']['name']);
   $target    = $targetDir . $filename;
 
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   mysqli_stmt_bind_param(
     $stmt,
-    'ssssi i',
+    'sssssi',
     $naslov,
     $sazetak,
     $tekst,
