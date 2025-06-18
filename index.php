@@ -46,7 +46,7 @@ include 'includes/header.php';
     ?>
       <article class="card">
         <a href="clanak.php?id=<?= $row['id'] ?>">
-          <img src="img/<?= htmlspecialchars($row['slika']) ?>"
+          <img src="pictures/<?= htmlspecialchars($row['slika']) ?>"
                alt="<?= htmlspecialchars($row['naslov']) ?>">
           <h3><?= htmlspecialchars($row['naslov']) ?></h3>
         </a>
