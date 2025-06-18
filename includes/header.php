@@ -15,7 +15,8 @@ if (session_status() === PHP_SESSION_NONE) {
 <body>
   <header>
     <div class="container">
-      <a class="logo" href="index.php">stern</a>
+
+      <a class="logo" href="index.php"><img src="pictures/logo.png" style="width:30%;height:auto"></a>
       <nav>
         <ul>
           <li><a href="index.php">Home</a></li>

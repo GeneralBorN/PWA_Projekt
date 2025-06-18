@@ -1,0 +1,128 @@
+/* reset i osnovni stil */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background: #ffffff;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* header/nav */
+header {
+  background: #ffffff;
+  color: #000000;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em 0;
+}
+.logo {
+  font-size: 1.6em;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+}
+nav li + li {
+  margin-left: 1.5em;
+}
+nav a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* sekcije */
+.section {
+  margin: 2.5em 0;
+}
+.section h2 {
+  font-size: 1.8em;
+  margin-bottom: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #222;
+}
+
+/* grid kartice */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1em;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.card h3 {
+  font-size: 1em;
+  padding: 0.75em;
+  color: #111;
+}
+
+/* footer */
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 1.2em 0;
+  margin-top: 3em;
+  font-size: 0.9em;
+}
+footer a {
+  color: #aaa;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Kartice: slika fiksne visine s izrezivanjem sadržaja prema boxu */
+.card img {
+  width: 10%;
+  height: 180px;       /* možeš prilagoditi visinu po potrebi */
+  object-fit: cover;   /* izrezuje i centrira sliku da ispuni okvir */
+  display: block;
+}
+
+/* Stil za gumb “Dodaj novi članak” */
+.btn {
+  display: inline-block;
+  padding: 0.5em 1em;
+  background: #0066cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.btn:hover {
+  background: #0055aa;
+}
