@@ -5,7 +5,7 @@ include 'includes/header.php';
 
 // zaštita: samo admin (razina=1) smije
 if (!isset($_SESSION['user']) || $_SESSION['user']['razina'] != 1) {
-  header('Location: login.php');
+  header('Location: administracija.php');
   exit;
 }
 ?>

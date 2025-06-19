@@ -22,14 +22,9 @@ if (session_status() === PHP_SESSION_NONE) {
           <li><a href="index.php">Home</a></li>
           <li><a href="kategorija.php?kat=Politik">Politik</a></li>
           <li><a href="kategorija.php?kat=Gesundheit">Gesundheit</a></li>
-          <?php if (isset($_SESSION['user']) && $_SESSION['user']['razina'] == 1): ?>
-            <li><a href="administracija.php">Administracija</a></li>
-          <?php endif; ?>
+          <li><a href="administracija.php">Administracija</a></li>
           <?php if (isset($_SESSION['user'])): ?>
             <li><a href="logout.php">Odjava (<?= htmlspecialchars($_SESSION['user']['korisnicko_ime']) ?>)</a></li>
-          <?php else: ?>
-            <li><a href="login.php">Prijava</a></li>
-            <li><a href="registracija.php">Registracija</a></li>
           <?php endif; ?>
         </ul>
       </nav>
