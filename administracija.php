@@ -46,37 +46,51 @@ include 'includes/header.php';
 
 <div class="container">
 <?php if (!isset($_SESSION['user'])): ?>
-  <h2>Prijava</h2>
-  <?php if ($login_msg) echo '<p>'.$login_msg.'</p>'; ?>
-  <form method="post">
-    <input type="hidden" name="action" value="login">
-    <label>Korisničko ime:<br>
-      <input type="text" name="korisnicko_ime" required>
-    </label><br><br>
-    <label>Lozinka:<br>
-      <input type="password" name="lozinka" required>
-    </label><br><br>
-    <button type="submit">Prijavi se</button>
-  </form>
-
-  <h2>Registracija</h2>
-  <?php if ($reg_msg) echo '<p>'.$reg_msg.'</p>'; ?>
-  <form method="post">
-    <input type="hidden" name="action" value="register">
-    <label>Ime:<br>
-      <input type="text" name="ime" required>
-    </label><br><br>
-    <label>Prezime:<br>
-      <input type="text" name="prezime" required>
-    </label><br><br>
-    <label>Korisničko ime:<br>
-      <input type="text" name="korisnicko_ime" required>
-    </label><br><br>
-    <label>Lozinka:<br>
-      <input type="password" name="lozinka" required>
-    </label><br><br>
-    <button type="submit">Registriraj se</button>
-  </form>
+  <?php $view = $_GET['view'] ?? null; ?>
+  <?php if (!$view): ?>
+    <div class="auth-options">
+      <a href="administracija.php?view=login" class="btn">Prijava</a>
+      <a href="administracija.php?view=register" class="btn">Registracija</a>
+    </div>
+  <?php elseif ($view === 'login'): ?>
+    <div class="auth-form">
+      <h2>Prijava</h2>
+      <?php if ($login_msg) echo '<p class="message">'.$login_msg.'</p>'; ?>
+      <form method="post">
+        <input type="hidden" name="action" value="login">
+        <label>Korisničko ime:
+          <input type="text" name="korisnicko_ime" required>
+        </label>
+        <label>Lozinka:
+          <input type="password" name="lozinka" required>
+        </label>
+        <button type="submit">Prijavi se</button>
+      </form>
+      <p class="text-center"><a href="administracija.php?view=register">Registriraj se</a></p>
+    </div>
+  <?php elseif ($view === 'register'): ?>
+    <div class="auth-form">
+      <h2>Registracija</h2>
+      <?php if ($reg_msg) echo '<p class="message">'.$reg_msg.'</p>'; ?>
+      <form method="post">
+        <input type="hidden" name="action" value="register">
+        <label>Ime:
+          <input type="text" name="ime" required>
+        </label>
+        <label>Prezime:
+          <input type="text" name="prezime" required>
+        </label>
+        <label>Korisničko ime:
+          <input type="text" name="korisnicko_ime" required>
+        </label>
+        <label>Lozinka:
+          <input type="password" name="lozinka" required>
+        </label>
+        <button type="submit">Registriraj se</button>
+      </form>
+      <p class="text-center"><a href="administracija.php?view=login">Imate račun? Prijavite se</a></p>
+    </div>
+  <?php endif; ?>
 <?php elseif ($_SESSION['user']['razina'] == 1): ?>
   <h2>Unos novog članka</h2>
   <form action="skripta_unos.php" method="post" enctype="multipart/form-data">

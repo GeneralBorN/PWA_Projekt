@@ -143,3 +143,66 @@ footer a:hover {
 .btn:hover {
   background: #0055aa;
 }
+/* auth page styles */
+.auth-options {
+  text-align: center;
+  margin-top: 2em;
+}
+.auth-options a {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 0 1em;
+  background: #0066cc;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+.auth-options a:hover {
+  background: #0055aa;
+}
+.auth-form {
+  max-width: 400px;
+  margin: 2em auto;
+  background: #f9f9f9;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+.auth-form h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+.auth-form label {
+  display: block;
+  margin-bottom: 0.5em;
+}
+.auth-form input,
+.auth-form textarea,
+.auth-form select {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 0.25em;
+}
+.auth-form button {
+  width: 100%;
+  padding: 0.5em;
+  margin-top: 1em;
+  background: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.auth-form button:hover {
+  background: #0055aa;
+}
+.text-center {
+  text-align: center;
+}
+.message {
+  color: red;
+  text-align: center;
+  margin-bottom: 1em;
+}
