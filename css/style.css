@@ -23,8 +23,8 @@ header {
 }
 header .container {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
   padding: 1em 0;
 }
 .logo {
@@ -36,6 +36,9 @@ header .container {
 nav ul {
   list-style: none;
   display: flex;
+}
+nav {
+  margin-top: 1em;
 }
 nav li + li {
   margin-left: 1.5em;
@@ -64,7 +67,7 @@ nav a:hover {
 /* grid kartice */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1em;
 }
 .card {
@@ -80,7 +83,8 @@ nav a:hover {
 .card img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 180px;
+  object-fit: cover;
 }
 .article-image {
   width: 100%;
@@ -92,20 +96,31 @@ nav a:hover {
 .card h3 {
   font-size: 1em;
   padding: 0.75em;
-  color: #111;
+  color: #c00;
+}
+
+.summary {
+  padding: 0 0.75em 0.75em;
+  color: #000;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 /* footer */
 footer {
-  background: #222;
-  color: #aaa;
+  background: #ffffff;
+  color: #333;
   text-align: center;
   padding: 1.2em 0;
   margin-top: 3em;
   font-size: 0.9em;
 }
 footer a {
-  color: #aaa;
+  color: #333;
   text-decoration: none;
 }
 footer a:hover {
@@ -113,12 +128,7 @@ footer a:hover {
 }
 
 /* Kartice: slika fiksne visine s izrezivanjem sadržaja prema boxu */
-.card img {
-  width: 10%;
-  height: 180px;       /* možeš prilagoditi visinu po potrebi */
-  object-fit: cover;   /* izrezuje i centrira sliku da ispuni okvir */
-  display: block;
-}
+/* (stil uključen u .card img iznad) */
 
 /* Stil za gumb “Dodaj novi članak” */
 .btn {

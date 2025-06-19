@@ -10,8 +10,8 @@ include 'includes/header.php';
     <div class="grid">
     <?php
       // pripremi query za 3 najnovija aktivna članka iz kategorije Politik
-      $sql = "SELECT id, naslov, slika FROM vijesti
-              WHERE arhiva=0 AND kategorija=? 
+      $sql = "SELECT id, naslov, sazetak, slika FROM vijesti
+              WHERE arhiva=0 AND kategorija=?
               ORDER BY datum DESC LIMIT 3";
       $stmt = mysqli_prepare($dbc, $sql);
       $kat = 'Politik';
@@ -21,10 +21,11 @@ include 'includes/header.php';
       while($row = mysqli_fetch_assoc($res)):
     ?>
       <article class="card">
-        <a href="clanak.php?id=<?= $row['id'] ?>">
+        <a class="card-link" href="clanak.php?id=<?= $row['id'] ?>">
           <img src="pictures/<?= htmlspecialchars($row['slika']) ?>"
                alt="<?= htmlspecialchars($row['naslov']) ?>">
           <h3><?= htmlspecialchars($row['naslov']) ?></h3>
+          <p class="summary"><?= htmlspecialchars($row['sazetak']) ?></p>
         </a>
       </article>
     <?php endwhile; ?>
@@ -45,10 +46,11 @@ include 'includes/header.php';
       while($row = mysqli_fetch_assoc($res)):
     ?>
       <article class="card">
-        <a href="clanak.php?id=<?= $row['id'] ?>">
+        <a class="card-link" href="clanak.php?id=<?= $row['id'] ?>">
           <img src="pictures/<?= htmlspecialchars($row['slika']) ?>"
                alt="<?= htmlspecialchars($row['naslov']) ?>">
           <h3><?= htmlspecialchars($row['naslov']) ?></h3>
+          <p class="summary"><?= htmlspecialchars($row['sazetak']) ?></p>
         </a>
       </article>
     <?php endwhile;
