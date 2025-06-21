@@ -23,7 +23,7 @@ Kliknite Go i pričekajte poruku o uspješnom uvozu.
 4. Otvaranje stranice u pregledniku
 
 U adresnu traku upišite:
-http://localhost/pwa_projekt/
+http://localhost/pwa_projekt/index.php
 Trebala bi vam se pojaviti početna stranica s člancima.
 
 5. Prijava u administraciju
