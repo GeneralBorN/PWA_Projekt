@@ -1,2 +1,42 @@
 # PWA_Projekt
  Projekt za kolegij Programiranje Web Aplikacija
+
+# Upute za pokretanje na localhost
+1. Smještanje projekta:
+
+Kopirajte cijeli folder web-projekta u direktorij XAMPP-a:
+C:\xampp\htdocs\pwa_projekt
+Provjerite da se u tom folderu nalaze svi podfolderi (css/, pictures/, includes/, dtb/, itd.).
+
+2. Pokretanje XAMPP servisa:
+
+Otvorite XAMPP Control Panel.
+
+Pokrenite module Apache i MySQL (stisnite “Start”).
+
+3. Import baze podataka:
+
+U web-pregledniku otvorite phpMyAdmin na adresi:
+http://localhost/phpmyadmin
+U phpMyAdmin-u izaberite karticu Import.
+
+Pritiskom na Choose file odaberite SQL datoteku iz projekta:
+pwa_projekt/dtb/projekt_v4(final).sql
+Kliknite Go i pričekajte poruku o uspješnom uvozu.
+
+4. Otvaranje stranice u pregledniku
+
+U adresnu traku upišite:
+http://localhost/pwa_projekt/index.php
+Trebala bi vam se pojaviti početna stranica s člancima.
+
+5. Prijava u administraciju
+
+Za upravljanje (unos/uređivanje/brisanje članka) prijavite se na:
+Administracija -> Login (za admin usera, koji stvara članke)
+Username: Admin
+password: adminpass
+
+Za stvaranje vlastitog usera idete
+Administracija -> Register
+i unesete sve potrebne informacije
