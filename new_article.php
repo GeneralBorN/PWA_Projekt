@@ -11,8 +11,9 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['razina'] != 1) {
 ?>
 
 <div class="container">
-  <h2>Unos novog članka</h2>
-  <form action="skripta_unos.php" method="post" enctype="multipart/form-data">
+  <div class="article-form">
+    <h2>Unos novog članka</h2>
+    <form action="skripta_unos.php" method="post" enctype="multipart/form-data">
     <label>Naslov:<br>
       <input type="text" name="naslov" required>
     </label><br><br>
@@ -41,8 +42,9 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['razina'] != 1) {
       Arhiviraj odmah
     </label><br><br>
 
-    <button type="submit">Spremi članak</button>
-  </form>
+      <button type="submit">Spremi članak</button>
+    </form>
+  </div>
 </div>
 
 <?php include 'includes/footer.php'; ?>
