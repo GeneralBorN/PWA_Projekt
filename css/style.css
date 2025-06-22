@@ -126,10 +126,6 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
-
-/* Kartice: slika fiksne visine s izrezivanjem sadržaja prema boxu */
-/* (stil uključen u .card img iznad) */
-
 /* Stil za gumb “Dodaj novi članak” */
 .btn {
   display: inline-block;
