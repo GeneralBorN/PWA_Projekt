@@ -8,7 +8,6 @@ if (!isset($_SESSION['user']) || $_SESSION['user']['razina'] != 1) {
   exit;
 }
 
-// ako je POST, procesiraj unos
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // 1) upload slike
   $targetDir = 'pictures/';
