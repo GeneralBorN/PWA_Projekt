@@ -1,5 +1,4 @@
 <?php
-// uključuje se na vrhu svakog skripta prije bilo kakvog outputa
 header('Content-Type: text/html; charset=utf-8');
 
 // prijava na MySQL
